@@ -167,19 +167,13 @@ function scroll() {
   // google map
   ///////////////////////////////
 
-function initialize()
-{
-var mapProp = {
-  center:new google.maps.LatLng(51.508742,-0.120850),
-  zoom:5,
-  mapTypeId:google.maps.MapTypeId.ROADMAP,
-  disableDefaultUI: true,
-  scrollwheel: false
-  };
-var map=new google.maps.Map(document.getElementById("googleMap")
-  ,mapProp);
-}
 
-google.maps.event.addDomListener(window, 'load', initialize);
+function initMap() {
+  var uluru = {lat: 43.0870, lng: -78.7278};
+  var map = new google.maps.Map(document.getElementById('googleMap'), {
+    zoom: 10,
+    center: uluru
+  });
+}
 
 
